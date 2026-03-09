@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapay Zeka Baret Tespiti</title>
+    <!-- Stil dosyasını dışarıdan yükle -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Baret Tespiti Yapay Zeka</h1>
+        <p class="subtitle">İnşaat sahası fotoğrafını yükleyin, yapay zeka baretleri anında tespit etsin.</p>
+
+        <!-- Drag & Drop Alanı -->
+        <div class="upload-area" id="drop-zone">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">Fotoğrafı sürükle ve bırak veya <span>tıklayarak seç</span></div>
+            <input type="file" id="file-input" accept="image/*">
+            <div class="file-name" id="file-name"></div>
+        </div>
+
+        <!-- Tespit Et Butonu -->
+        <button class="submit-btn" id="submit-btn" disabled>
+            🔍 Baretleri Tespit Et
+        </button>
+        <div class="error-message" id="error-message"></div>
+
+        <!-- Yükleme (Loading) Animasyonu -->
+        <div class="loading-container" id="loading">
+            <div class="spinner"></div>
+            <div class="loading-text">Yapay Zeka Fotoğrafı Analiz Ediyor...</div>
+        </div>
+
+        <!-- Sonuç Resmi Alanı -->
+        <div class="result-container" id="result-container">
+            <h3 style="margin-bottom: 15px; color: #a7f3d0; text-align: left;">Tespit Sonucu:</h3>
+            <div class="result-image-wrapper">
+                <img id="result-img" class="result-image" alt="Yapay Zeka Tespit Sonucu" src="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Script dosyasını dışarıdan yükle -->
+    <script src="static/script.js"></script>
+</body>
+
+</html>
